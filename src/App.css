@@ -1,32 +1,101 @@
-.App {
-  text-align: center;
+.body{
+
+}
+.topbar {
+  width: 100%;
+  background-image: url('./assest/background1.avif');
+  background-size: cover;
+  background-position: center;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  height: 80vh
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Main horizontal navbar container */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Logo wrapper */
+.navbar-firstDiv {
+  flex-shrink: 0;
+}
+
+/* Logo image */
+.navbar-firstDiv-img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Horizontal nav list */
+.navbar-div-ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links */
+.navbar-div-ul-li-a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.hero-div{
+  display: inline-block;
+  position: relative;
+  width: 450px;
+  height: 450px;
+  float: right;
+  border-radius: 10px;
+}
+
+.hero-div-h1{
+  color: #2f3d7e;
+  font-size: 24px;
+}
+
+.hero-div-p{
+  font-size: 18px;
+}
+
+.hero-div-button{
+  background-color: #2f3d7e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media (prefers-reduced-motion: no-preference) {
+  @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-div-ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .navbar-div-ul-li-a {
+    font-size: 14px;
+  }
+
+  .navbar-firstDiv-img {
+    width: 140px;
+  }
 }
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {
